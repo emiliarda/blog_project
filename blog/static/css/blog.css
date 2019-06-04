@@ -2,13 +2,15 @@ h1 a {
     color: #FCA205;
     font-family: 'Caveat Brush';
 }
-html, body {
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
+h1 {
     text-align: center;
+    margin: auto;
 }
+body {
+    text-align: center;
+    margin: auto;
 
+}
 .page-header {
     background-color: #f5e07a;
     margin-top: 0;
@@ -53,7 +55,7 @@ h1 img {
     margin-right: 20px;
  }
  .post {
-    color: #fffcf2;
+    background-color: #fffcf2;
     margin-bottom: 70px;
  }
  .post h1 a, .post h1 a:visited {
