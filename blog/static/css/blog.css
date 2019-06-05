@@ -9,7 +9,6 @@ h1 {
 body {
     text-align: center;
     margin: auto;
-
 }
 .page-header {
     background-color: #f5e07a;
@@ -17,7 +16,7 @@ body {
     padding: 20px 20px 20px 40px;
 }
 .page-header h1 {
-    text-align: center;
+    text-align: left;
 }
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #ffffff;
