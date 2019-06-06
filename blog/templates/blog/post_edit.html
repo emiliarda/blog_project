@@ -2,16 +2,16 @@
 
 {% block content %}
 <div class="centering">
-<h1>New post</h1><br>
+    <h1>New post</h1><br>
 
-<div class="form-group">
-    <form method="POST" class="post-form">{% csrf_token %}
-        <label>Title</label>
-        <div class="fomTextArea">{{ form.title }}</div>
-        <label>Text</label>
-        <div class="formTextArea">{{form.text}}</div>
-        <button type="submit" class="save btn btn-default">Save</button>
-</form>
-</div>
+    <div class="form-group">
+        <form method="POST" class="post-form">{% csrf_token %}
+            <label>Title</label>
+            <div class="fomTextArea">{{ form.title }}</div>
+            <label>Text</label>
+            <div class="formTextArea">{{form.text}}</div>
+            <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+    </div>
 </div>
 {% endblock %}

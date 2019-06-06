@@ -2,36 +2,60 @@
 
 {% block content %}
 <div class="centering">
-<div class="post">
-    {% if post.published_date %}
-    <div class="date">
-        {{ post.published_date }}
+    <div class="container shadow" style="width: 700px;">
+        <div class="row">
+            <div class="panel panel-default widget" style="width: 700px;">
+                <div class="post">
+                    {% if post.published_date %}
+                    <div class="date">
+                        {{ post.published_date }}
+                    </div>
+                    {% endif %}
+                    <h1>{{ post.title }}</h1>
+                    <p>{{ post.text }}</p>
+                    {% if user.is_authenticated and user.is_superuser %}
+                    <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
-    {% endif %}
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.text|linebreaksbr }}</p>
-    {% if user.is_authenticated and user.is_superuser %}
-        <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">
-            <span class="glyphicon glyphicon-pencil"></span>
-        </a>
-    <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}">
-        <span class="glyphicon glyphicon-remove"></span>
+    <br>
+    <a class="btn btn-default"
+       href="{% url 'add_comment_to_post' pk=post.pk %}">
+        Add comment
     </a>
-    {% endif %}
-</div>
-<hr>
-<a class="btn btn-default"
-   href="{% url 'add_comment_to_post' pk=post.pk %}">
-    Add comment
-</a>
-{% for comment in post.comments.all %}
-    <div class="comment">
-        <div class="date">{{ comment.created_date }}</div>
-        <strong>{{ comment.author }}</strong>
-        <p>{{ comment.text|linebreaks }}</p>
+
+    <div class="panel-body">
+        <ul class="list-group">
+            {% for comment in post.comments.all %}
+            <li class="list-group-item" style="text-align: center;">
+                <div class="row">
+                    <div class="col-xs-10 col-md-11">
+                        <div>
+                            <div style="text-align: left; font-size: 16px;">
+                                {{comment.author}}
+                            </div>
+                            <div style="text-align: right; color: #d9d9d9; font-size: 12px;">{{ comment.created_date }}
+                            </div>
+                        </div>
+                        <div class="comment-text">
+                            {{ comment.text }}
+                        </div>
+                        {% empty %}
+                        <br>
+                        <p>No comments here yet :(</p>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
-{% empty %}
-    <p>No comments here yet :(</p>
-{% endfor %}
 </div>
+
 {% endblock %}

@@ -3,94 +3,106 @@
 {% block content %}
 <div class="container">
     <div class="row">
-            <div class="col-xl">
-                <a href="{% url 'post_cat_food' %}">
+        <div class="col-xl">
+            <a href="{% url 'post_cat_food' %}">
                 <div class="card border-0 shadow">
-                    <img src="https://www.npvet.co.nz/wp-content/uploads/2017/05/17-pepper-abyssinian-1-500x350.jpg" class="card-img-top" alt="cat-image">
+                    <img src="https://www.npvet.co.nz/wp-content/uploads/2017/05/17-pepper-abyssinian-1-500x350.jpg"
+                         class="card-img-top" alt="cat-image">
                     <div class="card-body text-center">
                         <h5 class="card-title mb-0" style="font-size:24px; font-family: 'Caveat Brush';">Cat food</h5>
-                        <div class="card-text text-black-50">Mits and facts about what our pets should or should not eat.</div>
+                        <div class="card-text text-black-50">Mits and facts about what our pets should or should not
+                            eat.
+                        </div>
                     </div>
                 </div>
-                </a>
-            </div>
-            <div class="col-xl">
-                <a href="{% url 'post_new_kitten' %}">
+            </a>
+        </div>
+        <div class="col-xl">
+            <a href="{% url 'post_new_kitten' %}">
                 <div class="card border-0 shadow">
-                    <img src="http://sonyphotog.com/photos/globalmedicalco/15/71420.jpg" class="card-img-top" alt="cat-image">
+                    <img src="http://sonyphotog.com/photos/globalmedicalco/15/71420.jpg" class="card-img-top"
+                         alt="cat-image">
                     <div class="card-body text-center">
                         <h5 class="card-title mb-0" style="font-size:24px; font-family: 'Caveat Brush';">New kitten</h5>
                         <div class="card-text text-black-50">How to prepare before adopting a cat.</div>
                     </div>
                 </div>
-                </a>
-            </div>
+            </a>
+        </div>
     </div>
     <br><br>
     <div class="row">
-            <div class="col-xl">
-                <a href="{% url 'post_sick_cat' %}">
+        <div class="col-xl">
+            <a href="{% url 'post_sick_cat' %}">
                 <div class="card border-0 shadow">
-                    <img src="https://images.lynnejeancleaning.com/images/20180210031231/pet-friendly-cleaning-products-for-cats-dogs-500x350.jpeg" class="card-img-top" alt="cat-image">
+                    <img src="https://images.lynnejeancleaning.com/images/20180210031231/pet-friendly-cleaning-products-for-cats-dogs-500x350.jpeg"
+                         class="card-img-top" alt="cat-image">
                     <div class="card-body text-center">
                         <h5 class="card-title mb-0" style="font-size:24px; font-family: 'Caveat Brush';">Sick cat</h5>
                         <div class="card-text text-black-50">Most popular sicknesses and treatments.</div>
                     </div>
                 </div>
-                </a>
-            </div>
-            <div class="col-xl">
-                <a href="{% url 'post_behavioral_problems' %}">
+            </a>
+        </div>
+        <div class="col-xl">
+            <a href="{% url 'post_behavioral_problems' %}">
                 <div class="card border-0 shadow">
-                    <img src="http://www.kylejarrard.com/wp-content/uploads/2011/01/cropped-tough-cat-500x350.jpg" class="card-img-top" alt="cat-image">
+                    <img src="http://www.kylejarrard.com/wp-content/uploads/2011/01/cropped-tough-cat-500x350.jpg"
+                         class="card-img-top" alt="cat-image">
                     <div class="card-body text-center">
-                        <h5 class="card-title mb-0" style="font-size:24px; font-family: 'Caveat Brush';">Behavioral problems</h5>
-                        <div class="card-text text-black-50">Popular cat behavioral problems and how to deal with them.</div>
-                    </div>
-                </div>
-                </a>
-            </div>
-    </div>
-</div>
-<br><br>
-<div class="container shadow"  style="width: 1200px;">
-<div class="row">
-    <div class="panel panel-default widget" style="width: 1200px;">
-    <div class="panel-heading" style="background-color: #f5e07a; color: #ffffff; text-align: center;">
-        <h2 class="panel-title" style="font-size: 32px;">
-            Recent Comments</h2>
-        {% if user.is_authenticated %}
-        <a href="{% url 'post_new' %}">
-            <span class="glyphicon glyphicon-plus" style="color: #ffffff; font-size: 22px;"></span>
-        </a>
-        {% endif %}
-    </div>
-    <div class="panel-body">
-        <ul class="list-group">
-            {% for post in posts %}
-                <li class="list-group-item" style="text-align: center;">
-                    <div class="row">
-                        <div class="col-xs-10 col-md-11">
-                            <div>
-                                <div style="text-align: left; font-size: 16px;">
-                                    {{post.author}}
-                                </div>
-                                <div style="text-align: right; color: #d9d9d9; font-size: 12px;">{{post.published_date}}</div>
-                                <div>
-                                <a class="post-title" href="{% url 'post_detail' pk=post.pk %}" style="font-size:28px; font-family: 'Caveat Brush';">{{post.title}}</a>
-                                </div>
-                            </div>
-                            <div class="comment-text">
-                                {{post.text}}
-                            </div>
+                        <h5 class="card-title mb-0" style="font-size:24px; font-family: 'Caveat Brush';">Behavioral
+                            problems</h5>
+                        <div class="card-text text-black-50">Popular cat behavioral problems and how to deal with
+                            them.
                         </div>
                     </div>
-                </li>
-    {% endfor %}
-        </ul>
+                </div>
+            </a>
         </div>
     </div>
 </div>
+<br><br>
+<div class="container shadow" style="width: 1200px;">
+    <div class="row">
+        <div class="panel panel-default widget" style="width: 1200px;">
+            <div class="panel-heading" style="background-color: #f5e07a; color: #ffffff; text-align: center;">
+                <h2 class="panel-title" style="font-size: 32px;">
+                    Recent Comments</h2>
+                {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}">
+                    <span class="glyphicon glyphicon-plus" style="color: #ffffff; font-size: 22px;"></span>
+                </a>
+                {% endif %}
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    {% for post in posts %}
+                    <li class="list-group-item" style="text-align: center;">
+                        <div class="row">
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <div style="text-align: left; font-size: 16px;">
+                                        {{post.author}}
+                                    </div>
+                                    <div style="text-align: right; color: #d9d9d9; font-size: 12px;">
+                                        {{post.published_date}}
+                                    </div>
+                                    <div>
+                                        <a class="post-title" href="{% url 'post_detail' pk=post.pk %}"
+                                           style="font-size:28px; font-family: 'Caveat Brush';">{{post.title}}</a>
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                    {{post.text}}
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}

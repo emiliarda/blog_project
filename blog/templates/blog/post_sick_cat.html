@@ -5,7 +5,8 @@
     <div class="row">
         <div class="col-xl-6">
             <div class="card border-0 shadow">
-                <img src="https://images.lynnejeancleaning.com/images/20180210031231/pet-friendly-cleaning-products-for-cats-dogs-500x350.jpeg" class="card-img-top" alt="cat-image">
+                <img src="https://images.lynnejeancleaning.com/images/20180210031231/pet-friendly-cleaning-products-for-cats-dogs-500x350.jpeg"
+                     class="card-img-top" alt="cat-image">
                 <div class="card-body text-center">
                     <h5 class="card-title mb-0" style="font-size:24px; font-family: 'Caveat Brush';">Sick cat</h5>
                     <div class="card-text text-black-50">Most popular sicknesses and treatments.</div>
@@ -16,20 +17,22 @@
             <div class="card border-0 shadow">
                 <div class="card-body text-left">
                     <div class="card-text text-black-50">Our sweethearts get sick just like humans.
-                    <br>
-                    It's really hard to see when your baby hurts, right?
-                    <br>
-                    You should trust your vet, but when you have doubts about the diagnosis, maybe you should go see another vet.<br>
-                    Pets don't really feel like visiting doctors, so if it's not necessary - don't stress them.<br>
-                    And one more thing - if you see some worrying symptoms, don't wait. <br>
-                    Do you have any experience with sick cat? How did you deal with it?</div>
+                        <br>
+                        It's really hard to see when your baby hurts, right?
+                        <br>
+                        You should trust your vet, but when you have doubts about the diagnosis, maybe you should go see
+                        another vet.<br>
+                        Pets don't really feel like visiting doctors, so if it's not necessary - don't stress them.<br>
+                        And one more thing - if you see some worrying symptoms, don't wait. <br>
+                        Do you have any experience with sick cat? How did you deal with it?
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <br><br>
-<div class="container shadow"  style="width: 1200px;">
+<div class="container shadow" style="width: 1200px;">
     <div class="row">
         <div class="panel panel-default widget" style="width: 1200px;">
             <div class="panel-heading" style="background-color: #f5e07a; color: #ffffff; text-align: center;">
@@ -51,9 +54,12 @@
                                     <div style="text-align: left; font-size: 16px;">
                                         {{post.author}}
                                     </div>
-                                    <div style="text-align: right; color: #d9d9d9; font-size: 12px;">{{post.published_date}}</div>
+                                    <div style="text-align: right; color: #d9d9d9; font-size: 12px;">
+                                        {{post.published_date}}
+                                    </div>
                                     <div>
-                                        <a class="post-title" href="{% url 'post_detail' pk=post.pk %}" style="font-size:28px; font-family: 'Caveat Brush';">{{post.title}}</a>
+                                        <a class="post-title" href="{% url 'post_detail' pk=post.pk %}"
+                                           style="font-size:28px; font-family: 'Caveat Brush';">{{post.title}}</a>
                                     </div>
                                 </div>
                                 <div class="comment-text">

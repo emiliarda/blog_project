@@ -1,33 +1,35 @@
 {% load staticfiles %}
 <html>
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <title>Cat mom's blog</title>
-    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Sunflower:300&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Sunflower:300&display=swap" rel="stylesheet"
+          type="text/css">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
-    <div class="page-header">
-        {% if user.is_authenticated %}
-        <p class="top-menu">Hello, {{ user.username }}
-            <small>(<a href="{% url 'logout' %}">Log out</a>)</small>
-        </p>
-        {% else %}
-            <a href="{% url 'register' %}" class="top-menu">
-                <span class="glyphicon glyphicon-lock"></span>
-            </a>
-        {% endif %}
-            <h1><img src="/static/img/cat.png" alt="Cat" height="46" width="46"><a href="/"> Cat mom's blog</a>
-            </h1>
-    </div>
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8" >
-                {% block content %}
-                {% endblock %}
-            </div>
+<div class="page-header">
+    {% if user.is_authenticated %}
+    <p class="top-menu">Hello, {{ user.username }}
+        <small>(<a href="{% url 'logout' %}">Log out</a>)</small>
+    </p>
+    {% else %}
+    <a href="{% url 'register' %}" class="top-menu">
+        <span class="glyphicon glyphicon-lock"></span>
+    </a>
+    {% endif %}
+    <h1><img src="/static/img/cat.png" alt="Cat" height="46" width="46"><a href="/"> Cat mom's blog</a>
+    </h1>
+</div>
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
         </div>
     </div>
+</div>
 </body>
 </html>

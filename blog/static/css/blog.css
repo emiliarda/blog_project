@@ -2,10 +2,6 @@ h1 a {
     color: #FCA205;
     font-family: 'Caveat Brush';
 }
-h1 {
-    text-align: center;
-    margin: auto;
-}
 body {
     text-align: center;
     margin: auto;
@@ -15,15 +11,6 @@ body {
     margin-top: 0;
     padding: 20px 20px 20px 20px;
 }
-#post-edit{
-    width: 700px;
-    margin-right: 100px;
-    margin-left: 200px;
-}
-.form-group{
-    margin: 0px 50px 0px 50px;
-    padding: 0px 50px 0px 50px;
-}
 .page-header h1 {
     text-align: left;
 }
@@ -31,8 +18,7 @@ body {
     color: #ffffff;
     font-size: 36pt;
     text-decoration: none;
- }
-
+}
 h1 img {
     margin-bottom: 10px;
     filter: invert(100%);
@@ -44,10 +30,6 @@ h1 img {
 
  h1, h2, h3, h4 {
     font-family: 'Caveat Brush', cursive;
- }
- .date {
-    color: #828282;
-    font-family: 'Sunflower';
  }
  .save {
     float: center;
@@ -75,9 +57,9 @@ h1 img {
     margin-right: 20px;
  }
  .centering {
- width: 700px;
-         margin-right: 100px;
-         margin-left: 200px;
+    width: 700px;
+    margin-right: 100px;
+    margin-left: 200px;
  }
  .post h1 a, .post h1 a:visited {
     color: #000000;
@@ -85,9 +67,7 @@ h1 img {
 .comment {
     margin: 20px 0px 20px 20px;
 }
-
 a {
-    font-family: 'Sunflower';
     color: #000000;
     text-decoration: none;
 }
