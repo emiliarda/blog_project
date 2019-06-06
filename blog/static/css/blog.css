@@ -13,7 +13,16 @@ body {
 .page-header {
     background-color: #f5e07a;
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    padding: 20px 20px 20px 20px;
+}
+#post-edit{
+    width: 700px;
+    margin-right: 100px;
+    margin-left: 200px;
+}
+.form-group{
+    margin: 0px 50px 0px 50px;
+    padding: 0px 50px 0px 50px;
 }
 .page-header h1 {
     text-align: left;
@@ -49,14 +58,8 @@ h1 img {
  }
  .post-form {
     text-align: center;
+    float:center;
     margin: auto;
- }
- .row {
-    text-align: center;
-    margin: 0px auto 0px auto;
- }
- .col-md-8 {
-    display: inline-block;
  }
  .post-form textarea, .post-form input {
     width: 100%;
@@ -71,8 +74,10 @@ h1 img {
     font-size: 26pt;
     margin-right: 20px;
  }
- .post {
-    margin-bottom: 70px;
+ .centering {
+ width: 700px;
+         margin-right: 100px;
+         margin-left: 200px;
  }
  .post h1 a, .post h1 a:visited {
     color: #000000;

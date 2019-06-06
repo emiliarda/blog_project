@@ -1,6 +1,8 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
+<div class="centering">
+    <h2>Log in</h2>
     <form class="form-structor" method="post" action="{% url 'login' %}">
     {% csrf_token %}
         <div class="signup">
@@ -10,6 +12,7 @@
             <p>{{ form.password.label_tag }}</p>
             <p>{{ form.password }}</p>
             {% if form.errors %}
+                <br>
         <p style="color: red">Your username and password didn't match. Please try again.</p>
         {% endif %}
         <input class="btn btn-default" type="submit" value="login" />
@@ -17,4 +20,5 @@
             </div>
             </div>
     </form>
+</div>
 {% endblock %}

@@ -1,6 +1,7 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+<div class="centering">
 <h1>New post</h1><br>
 
 <div class="form-group">
@@ -11,5 +12,6 @@
         <div class="formTextArea">{{form.text}}</div>
         <button type="submit" class="save btn btn-default">Save</button>
 </form>
+</div>
 </div>
 {% endblock %}

@@ -1,13 +1,12 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+<div class="centering">
 <div class="post">
     {% if post.published_date %}
     <div class="date">
         {{ post.published_date }}
     </div>
-    {% else if user.is_superuser%}
-    <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
     {% endif %}
     <h1>{{ post.title }}</h1>
     <p>{{ post.text|linebreaksbr }}</p>
@@ -34,4 +33,5 @@
 {% empty %}
     <p>No comments here yet :(</p>
 {% endfor %}
+</div>
 {% endblock %}
